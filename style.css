@@ -1,0 +1,312 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing:antialiased;
+  -moz-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --heu: 195;
+  --color-base-blue: hsl(var(--heu), 91%, 25%);
+  --color-base-blue1: hsl(var(--heu), 46%, 40%);
+  --color-base-white: hsl(0, 0%, 100%);
+  --color-base-white1: hsl(var(--heu), 100%, 98%);
+  --color-base-black: hsl(240, 6%, 13%);
+}
+
+html, body, input {
+  font-family: 'Mulish', sans-serif;
+}
+
+body {
+  font-size: 1.6rem;
+  background-color: var(--color-base-white);
+  max-width: 115.9rem;
+}
+
+#app {
+  
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
+  height: 100vh;
+  
+}
+
+
+nav {
+  background-color:var(--color-base-blue);
+  display: flex;
+  gap: 2.8rem;
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+}
+
+.logo {
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  padding: .8rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color:var(--color-base-white1);
+  border-radius: 50%;
+}
+
+header form {
+  flex: 1;
+}
+
+.input-wrapper label {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 1.2rem;
+
+  background-color:var(--color-base-blue1);
+  align-items: center;
+  border: 0;
+  border-radius: .4rem;
+
+  
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+  opacity: 0.56;
+  color: var(--color-base-white);
+}
+
+.avatar{
+  width: 4.2rem;
+  height: 4.2rem;
+
+  object-fit: cover;
+  
+  border-radius: 50%;
+}
+
+.cat {
+  width: 100%;
+}
+
+main, section {
+  background-color: var(--color-base-white);
+  padding: 2.2rem;
+}
+
+main h1{
+
+color: var(--color-base-black);
+
+font-size: 2.4rem;
+font-weight: 700;
+line-height: 160%;
+margin-top: 3.1rem;
+
+}
+
+.curtir,
+.ncurtir {
+  background-color: var(--color-base-blue);
+
+padding: 1.2rem;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+
+border-radius: 50%;
+
+margin-bottom: 3.1rem;
+
+}
+
+main p {
+
+color: var(--color-base-black);
+
+font-size: 1.6rem;
+font-weight: 400;
+line-height: 160%;
+
+
+
+}
+
+section h1 {
+color: var(--color-base-black);
+
+font-size: 2.4rem;
+font-weight: 700;
+line-height: 160%;
+
+margin-top: 3.4rem;
+
+}
+
+.gallery {
+  margin-top: 3.2rem;
+  display:grid;
+  gap: 1.6rem;
+
+}
+
+.item {
+  
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  margin-bottom: 3.2rem;
+  
+}
+
+.item img {
+  /* width: 100%; */
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.details h2 {
+ color: var(--color-base-black); 
+
+font-size: 1.8rem;
+font-weight: 700;
+line-height: 160%;
+}
+
+.details p {
+color: var(--color-base-black);
+
+
+font-size: 1.4rem;
+font-weight: 400;
+line-height: 160%;
+}
+
+footer {
+
+  background-color:var(--color-base-blue);
+  padding: 16px;
+
+
+}
+
+footer p {
+  text-align: center;
+  color: var(--color-base-white);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+@media (min-width: 1160px) {
+
+  body {
+    max-width: fit-content;
+  }
+
+  nav {
+    padding: 12px 112px;
+  }
+  
+   main,
+   section {
+    background-color:var(--color-base-white1);
+    
+  } 
+
+  
+ 
+
+  
+  
+ #app {
+   grid-template-areas: 
+  "A A A"
+  "B B C"
+  "D D D";
+ }
+  
+ #app header {
+  grid-area: A;
+ }
+
+ #app main {
+  grid-area: B;
+ }
+
+ #app section {
+  grid-area: C;
+ }
+
+ #app footer {
+  grid-area: D;
+ }
+
+section.gallery {
+  margin-top: 0;
+}
+
+section h1 {
+  margin-top: 0;
+}
+
+main .container {
+
+  max-width: 80rem;
+
+  padding-top: 4.4rem;
+  padding-left: 10.9rem;
+  padding-right: 3.4rem;
+  padding-bottom: 10.3rem;
+
+
+}
+
+section .container {
+
+
+  padding-top:4.4rem; 
+  padding-right: 10.9rem;
+   padding-bottom: 29.5rem;
+
+}
+
+main h1 {
+  /* display: inline-flex; */
+  /* padding-right: 36rem; */
+
+  margin-bottom: 3.1rem;
+}
+
+/* .a {
+  display: flex;
+  gap: .9rem;
+} */
+
+.cats {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 3.1rem;
+  justify-content: space-between;
+  padding: 0;
+
+}
+
+}
+
+
+
+
+
+
+
